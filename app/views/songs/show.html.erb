@@ -1,0 +1,3 @@
+<h1> My Song </h1>
+<%= @song.title %>
+<%= (link_to @song.title, song_path(@song.title)) if @song.title %>
