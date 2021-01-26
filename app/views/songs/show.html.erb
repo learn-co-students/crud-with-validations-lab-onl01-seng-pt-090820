@@ -1,0 +1,16 @@
+<h1><%= @song.title %></h1>
+<h6>Artist: <%= @song.artist_name %></h6>
+    <br>
+<h6>Release Year: 
+<% if @song.released %>
+    <%= @song.release_year %>
+<% else %>
+    Unreleased
+<% end %></h6>
+    <br>
+<h6>Genre: <%= @song.genre %></h6>
+
+    <br>
+<%= link_to "Edit", edit_song_path(@song)%>
+<%= link_to "Delete", @song, method: :delete, data: {confirm: "Delete?"} %>
+<%= link_to "Songs", songs_path %>
