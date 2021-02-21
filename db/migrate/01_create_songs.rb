@@ -7,7 +7,7 @@ class CreateSongs < ActiveRecord::Migration
       t.string :genre
       t.string :artist_name
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
